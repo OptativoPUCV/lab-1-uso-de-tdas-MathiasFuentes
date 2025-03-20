@@ -129,3 +129,15 @@ exercises.c:64:15: error: assignment makes integer from pointer without a cast [
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3e90750
+Thu, Mar 20, 2025  5:45:06 PM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:63:15: error: dereferencing 'void *' pointer [-Werror]
+       suma += *(current);
+               ^~~~~~~~~~
+exercises.c:63:15: error: void value not ignored as it ought to be
+cc1.exe: all warnings being treated as errors
+Compilation failed
+028c7ec
