@@ -68,3 +68,18 @@ Thu, Mar 20, 2025  5:33:26 PM:
  tests:  1|4
 total_score: 10/70
 cd5b265
+Thu, Mar 20, 2025  5:40:03 PM: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:64:15: error: dereferencing 'void *' pointer [-Werror]
+       suma += *current;
+               ^~~~~~~~
+exercises.c:64:15: error: void value not ignored as it ought to be
+exercises.c:60:8: error: unused variable 'talla' [-Werror=unused-variable]
+    int talla = get_size(L);
+        ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+66ba72d

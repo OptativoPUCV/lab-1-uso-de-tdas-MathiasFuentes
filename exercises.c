@@ -51,14 +51,20 @@ List* crea_lista() {
    return lista;
 }
 
-
 /*
 Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   return 0;
+   int talla = get_size(L);
+   int suma = 0;
+   void* current = first(L);
+   while(current != NULL){
+      suma += *current;
+      current = next(L);
+   }
+   return suma;
 }
 
 /*
