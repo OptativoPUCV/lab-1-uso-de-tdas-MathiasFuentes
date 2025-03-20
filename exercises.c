@@ -58,9 +58,9 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
    int suma = 0;
-   void* current = first(L);
+   int current = first(L);
    while(current != NULL){
-      suma += (int)current;
+      suma += current;
       current = next(L);
    }
    return suma;
