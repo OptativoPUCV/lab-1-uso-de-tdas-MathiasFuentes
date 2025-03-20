@@ -60,7 +60,7 @@ int sumaLista(List *L) {
    int suma = 0;
    void* current = first(L);
    while(current != NULL){
-      suma += current;
+      suma += *(int*)current;
       current = next(L);
    }
    return suma;
