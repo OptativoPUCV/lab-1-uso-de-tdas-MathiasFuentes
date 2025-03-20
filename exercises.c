@@ -42,10 +42,17 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-   return L;
+   List* lista = create_list();
+   for (int i = 1; i < 11 ; i++){
+      int *elemento = malloc(sizeof(int));
+      *elemento = i;
+      if (i == 1) pushFront(lista, *elemento);
+      else pushCurrent(lista, *elemento);
+   }
+   return lista;
 }
 
+/*
 /*
 Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
@@ -88,4 +95,3 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    return 0;
 }
-

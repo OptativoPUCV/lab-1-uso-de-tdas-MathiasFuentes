@@ -1,0 +1,30 @@
+Thu, Mar 20, 2025  5:30:16 PM: 
+ exercises.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:49:36: error: passing argument 2 of 'pushFront' makes pointer from integer without a cast [-Werror=int-conversion]
+       if (i == 1) pushFront(lista, *elemento);
+                                    ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:17:6: note: expected 'void *' but argument is of type 'int'
+ void pushFront(List *L, void *dato);
+      ^~~~~~~~~
+In file included from test.c:5:0:
+exercises.c:50:31: error: passing argument 2 of 'pushCurrent' makes pointer from integer without a cast [-Werror=int-conversion]
+       else pushCurrent(lista, *elemento);
+                               ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:23:6: note: expected 'void *' but argument is of type 'int'
+ void pushCurrent(List *L, void *dato);
+      ^~~~~~~~~~~
+In file included from test.c:5:0:
+exercises.c: At top level:
+exercises.c:56:1: error: "/*" within comment [-Werror=comment]
+ /*
+  
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3f6cb15
