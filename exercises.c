@@ -46,13 +46,13 @@ List* crea_lista() {
    for (int i = 1; i < 11 ; i++){
       int *elemento = malloc(sizeof(int));
       *elemento = i;
-      if (i == 1) pushFront(lista, *elemento);
-      else pushCurrent(lista, *elemento);
+      if (i == 1) pushFront(lista, elemento);
+      else pushCurrent(lista, elemento);
    }
    return lista;
 }
 
-/*
+
 /*
 Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
