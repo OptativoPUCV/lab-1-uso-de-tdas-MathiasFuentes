@@ -124,10 +124,10 @@ int parentesisBalanceados(char *cadena) {
          push(pila, (void*)cptr);
       }
       else{
-         char apertura = pop(pila);
-         if ((c == ')' && apertura != '(') || 
-            (c == ']' && apertura != '[') || 
-            (c == '}' && apertura != '{'))   {
+         char *apertura = pop(pila);
+         if ((c == ')' && *apertura != '(') || 
+            (c == ']' && *apertura != '[') || 
+            (c == '}' && *apertura != '{'))   {
                return 0;
             }
    }
