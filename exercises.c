@@ -119,7 +119,7 @@ int parentesisBalanceados(char *cadena) {
    for (int i = 0 ; cadena[i] != '\0' ; i++){
       char c = cadena[i];
       if (c == '(' || c == '[' || c == '{'){
-         push(pila, c);
+         push(pila, (void *)c);
       }
       else{
          char apertura = pop(pila);
